@@ -1,10 +1,12 @@
 ﻿using Hcms.Business.Core.Interfaces;
+using Hcms.Domain.Data;
 using Hcms.Domain.Seo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Hcms.Business.Common.Services
 {
@@ -13,24 +15,66 @@ namespace Hcms.Business.Common.Services
     /// </summary>
     public class SlugService : ISlugService
     {
-        Task ISlugService.DeleteEntityUrl(EntityUrl entityUrl)
+        private readonly IRepository<EntityUrl> _urlEntityRepository;
+        public SlugService(IRepository<EntityUrl> urlEntityRepository)
         {
-            throw new NotImplementedException();
+            _urlEntityRepository = urlEntityRepository;
         }
 
-        Task<EntityUrl> ISlugService.GetBySlug(string slug)
+        /// <summary>
+        /// Deletes an URL Entity
+        /// </summary>
+        /// <param name="urlEntity">URL Entity</param>
+        public virtual async Task DeleteEntityUrl(EntityUrl entityUrl)
         {
-            throw new NotImplementedException();
-        }
+            if (entityUrl == null)
+                throw new ArgumentNullException(nameof(entityUrl));
 
-        Task ISlugService.InsertEntityUrl(EntityUrl urlEntity)
-        {
-            throw new NotImplementedException();
+            await _urlEntityRepository.DeleteAsync(entityUrl);
         }
-
-        Task ISlugService.UpdateEntityUrl(EntityUrl urlEntity)
+        /// <summary>
+        /// Find URL Entity
+        /// </summary>
+        /// <param name="slug">Slug</param>
+        /// <returns>Found URL Entity</returns>
+        public virtual async Task<EntityUrl> GetBySlug(string slug)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(slug))
+                return null;
+
+            slug = slug.ToLowerInvariant();
+
+            var query = from ur in _urlEntityRepository.Table
+                        where ur.Slug == slug
+                        orderby ur.IsActive
+                        select ur;
+            return await Task.FromResult(query.FirstOrDefault());
+        }
+        /// <summary>
+        /// Inserts an URL Entity
+        /// </summary>
+        /// <param name="urlEntity">URL Entity</param>
+        public virtual async Task InsertEntityUrl(EntityUrl urlEntity)
+        {
+            if (urlEntity == null)
+                throw new ArgumentNullException(nameof(urlEntity));
+
+            await _urlEntityRepository.InsertAsync(urlEntity);
+
+       
+        }
+        /// <summary>
+        /// Updates the URL Entity
+        /// </summary>
+        /// <param name="urlEntity">URL Entity</param>
+        public virtual async Task UpdateEntityUrl(EntityUrl urlEntity)
+        {
+            if (urlEntity == null)
+                throw new ArgumentNullException(nameof(urlEntity));
+
+            await _urlEntityRepository.UpdateAsync(urlEntity);
+
+          
         }
     }
 }
