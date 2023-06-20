@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hcms.Business.Blog.Interfaces
+namespace Hcms.Business.Core.Interfaces
 {
     /// <summary>
     /// Blog service interface

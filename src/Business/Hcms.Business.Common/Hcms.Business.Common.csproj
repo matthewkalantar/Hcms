@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -7,12 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Events\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Core\Hcms.Domain\Hcms.Domain.csproj" />
-    <ProjectReference Include="..\..\Core\Hcms.Infrastructure\Hcms.Infrastructure.csproj" />
     <ProjectReference Include="..\Hcms.Business.Core\Hcms.Business.Core.csproj" />
   </ItemGroup>
 

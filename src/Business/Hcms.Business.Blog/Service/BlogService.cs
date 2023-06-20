@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 using MediatR;
 using Hcms.Domain;
 using Hcms.Infrastructure.Extensions;
+using Hcms.Business.Core.Interfaces;
 
 namespace Hcms.Business.Blog.Service
 {
-    public class BlogService
+    public class BlogService : IBlogService
     {
         #region Def
 

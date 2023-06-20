@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hcms.Infrastructure
+namespace Hcms.Infrastructure.Events
 {
     /// <summary>
     /// A container for entities that have been inserted.

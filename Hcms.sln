@@ -19,17 +19,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hcms.Infrastructure", "src\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2129418F-6181-43C3-8675-BE1BA5A94986}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hcms.Business.Blog.Tests", "src\Tests\Hcms.Business.Blog.Tests\Hcms.Business.Blog.Tests.csproj", "{4429B984-84ED-4109-8E00-B08839F761FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hcms.Business.Blog.Tests", "src\Tests\Hcms.Business.Blog.Tests\Hcms.Business.Blog.Tests.csproj", "{4429B984-84ED-4109-8E00-B08839F761FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hcms.Domain.Tests", "src\Tests\Hcms.Domain.Tests\Hcms.Domain.Tests.csproj", "{67207928-5221-42D0-828F-C356DD26F1F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hcms.Domain.Tests", "src\Tests\Hcms.Domain.Tests\Hcms.Domain.Tests.csproj", "{67207928-5221-42D0-828F-C356DD26F1F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hcms.Common.Test", "src\Tests\Hcms.Common.Test\Hcms.Common.Test.csproj", "{6D3FFDE9-74A6-4558-B9EC-A30A6E1E1979}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hcms.Common.Test", "src\Tests\Hcms.Common.Test\Hcms.Common.Test.csproj", "{6D3FFDE9-74A6-4558-B9EC-A30A6E1E1979}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hcms.Infrastructure.Tests", "src\Tests\Hcms.Infrastructure.Tests\Hcms.Infrastructure.Tests.csproj", "{F2C9AC2C-73F3-4E5E-B7AA-A23FC2B9EC91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hcms.Infrastructure.Tests", "src\Tests\Hcms.Infrastructure.Tests\Hcms.Infrastructure.Tests.csproj", "{F2C9AC2C-73F3-4E5E-B7AA-A23FC2B9EC91}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{62E85C62-0022-46B0-A60F-20DFACBE70F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hcms.Api", "src\Api\Hcms.Api\Hcms.Api.csproj", "{DF8E12C0-6124-4425-8EAA-A5F3A17850DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hcms.Api", "src\Api\Hcms.Api\Hcms.Api.csproj", "{DF8E12C0-6124-4425-8EAA-A5F3A17850DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hcms.Business.Common", "src\Business\Hcms.Business.Common\Hcms.Business.Common.csproj", "{056D8364-7ACD-4C67-BAA9-2FB6B26CCBEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hcms.Business.Core", "src\Business\Hcms.Business.Core\Hcms.Business.Core.csproj", "{3E4E153E-4558-443A-8758-AEF69267B937}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +81,14 @@ Global
 		{DF8E12C0-6124-4425-8EAA-A5F3A17850DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF8E12C0-6124-4425-8EAA-A5F3A17850DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF8E12C0-6124-4425-8EAA-A5F3A17850DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{056D8364-7ACD-4C67-BAA9-2FB6B26CCBEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056D8364-7ACD-4C67-BAA9-2FB6B26CCBEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056D8364-7ACD-4C67-BAA9-2FB6B26CCBEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056D8364-7ACD-4C67-BAA9-2FB6B26CCBEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E4E153E-4558-443A-8758-AEF69267B937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E4E153E-4558-443A-8758-AEF69267B937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E4E153E-4558-443A-8758-AEF69267B937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E4E153E-4558-443A-8758-AEF69267B937}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +103,8 @@ Global
 		{6D3FFDE9-74A6-4558-B9EC-A30A6E1E1979} = {2129418F-6181-43C3-8675-BE1BA5A94986}
 		{F2C9AC2C-73F3-4E5E-B7AA-A23FC2B9EC91} = {2129418F-6181-43C3-8675-BE1BA5A94986}
 		{DF8E12C0-6124-4425-8EAA-A5F3A17850DD} = {62E85C62-0022-46B0-A60F-20DFACBE70F9}
+		{056D8364-7ACD-4C67-BAA9-2FB6B26CCBEB} = {24F5BA09-4D30-42C3-93C8-F486DADDB234}
+		{3E4E153E-4558-443A-8758-AEF69267B937} = {24F5BA09-4D30-42C3-93C8-F486DADDB234}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6202784C-01B0-4E9B-B976-FDAEB7AE4E99}
