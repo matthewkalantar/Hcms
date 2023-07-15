@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Hcms.Domain.Data
 {
+   
     public partial interface IRepository<T> where T : BaseEntity
     {
         /// <summary>
