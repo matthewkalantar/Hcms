@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Hcms.Pages
+namespace AgileCMS.Pages
 {
     public class PrivacyModel : PageModel
     {

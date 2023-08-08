@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Events\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\AgileCMS.Domain\AgileCMS.Domain.csproj" />
+    <ProjectReference Include="..\..\Core\AgileCMS.Infrastructure\AgileCMS.Infrastructure.csproj" />
+    <ProjectReference Include="..\AgileCMS.Business.Core\AgileCMS.Business.Core.csproj" />
+  </ItemGroup>
+
+</Project>
