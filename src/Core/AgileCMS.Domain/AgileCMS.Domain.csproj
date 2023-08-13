@@ -8,11 +8,15 @@
 
   <ItemGroup>
     <PackageReference Include="MongoDB.Bson" Version="2.19.1" />
-	  <PackageReference Include="MongoDB.Driver" Version="2.19.1" />
+
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AgileCMS.Common\AgileCMS.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>

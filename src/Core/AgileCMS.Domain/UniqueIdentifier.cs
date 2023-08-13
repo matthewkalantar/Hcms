@@ -1,6 +1,6 @@
 ﻿using MongoDB.Bson;
 
-namespace AgileCMS.Domain.Data
+namespace AgileCMS.Domain
 {
     public static class UniqueIdentifier
     {

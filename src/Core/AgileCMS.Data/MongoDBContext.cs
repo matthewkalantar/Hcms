@@ -1,6 +1,7 @@
-﻿using MongoDB.Driver;
+﻿using AgileCMS.Domain.Data;
+using MongoDB.Driver;
 
-namespace AgileCMS.Domain.Data.Mongo
+namespace AgileCMS.Data
 {
     public class MongoDBContext : IDatabaseContext
     {
@@ -8,7 +9,7 @@ namespace AgileCMS.Domain.Data.Mongo
         protected IMongoDatabase _database;
         public MongoDBContext()
         {
-           
+
         }
 
 

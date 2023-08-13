@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\AgileCMS.Data\AgileCMS.Data.csproj" />
     <ProjectReference Include="..\..\Core\AgileCMS.Domain\AgileCMS.Domain.csproj" />
     <ProjectReference Include="..\AgileCMS.Business.Core\AgileCMS.Business.Core.csproj" />
   </ItemGroup>

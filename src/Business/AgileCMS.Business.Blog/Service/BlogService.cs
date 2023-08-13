@@ -167,7 +167,7 @@ namespace AgileCMS.Business.Blog.Service
         }
 
         /// <summary>
-        /// Inserts an blog post
+        /// Inserts a blog post
         /// </summary>
         /// <param name="blogPost">Blog post</param>
         public virtual async Task InsertBlogPost(BlogPost blogPost)

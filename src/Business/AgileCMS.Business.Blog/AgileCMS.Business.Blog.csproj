@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\AgileCMS.Data\AgileCMS.Data.csproj" />
     <ProjectReference Include="..\..\Core\AgileCMS.Domain\AgileCMS.Domain.csproj" />
     <ProjectReference Include="..\..\Core\AgileCMS.Infrastructure\AgileCMS.Infrastructure.csproj" />
     <ProjectReference Include="..\AgileCMS.Business.Core\AgileCMS.Business.Core.csproj" />

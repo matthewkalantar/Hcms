@@ -11,12 +11,7 @@ namespace AgileCMS.Domain.Data
    
     public partial interface IRepository<T> where T : BaseEntity
     {
-        /// <summary>
-        /// Sets a collection
-        /// </summary>
-        bool SetCollection(string collectionName);
-
-
+       
         /// <summary>
         /// Get entity by identifier
         /// </summary>
@@ -50,23 +45,18 @@ namespace AgileCMS.Domain.Data
         Task<T> InsertAsync(T entity);
 
         /// <summary>
-        /// Insert entities
+        /// Insert entities (bulk)
         /// </summary>
         /// <param name="entities">Entities</param>
         void Insert(IEnumerable<T> entities);
 
         /// <summary>
-        /// Async Insert entities
+        /// Async Insert entities (bulk) and return entities
         /// </summary>
         /// <param name="entities">Entities</param>
         Task<IEnumerable<T>> InsertAsync(IEnumerable<T> entities);
 
-        /// <summary>
-        /// Async Insert many entities
-        /// </summary>
-        /// <param name="entities">Entities</param>
-        Task InsertManyAsync(IEnumerable<T> entities);
-
+      
         /// <summary>
         /// Update entity
         /// </summary>
@@ -94,79 +84,7 @@ namespace AgileCMS.Domain.Data
         /// <param name="value">value</param>
         Task UpdateField<U>(string id, Expression<Func<T, U>> expression, U value);
 
-        /// <summary>
-        /// Inc field for entity
-        /// </summary>
-        /// <typeparam name="U">Value</typeparam>
-        /// <param name="id">Ident record</param>
-        /// <param name="expression">Linq Expression</param>
-        /// <param name="value">value</param>
-        Task IncField<U>(string id, Expression<Func<T, U>> expression, U value);
-
-        /// <summary>
-        /// Updates a single entity
-        /// </summary>
-        /// <param name="filterexpression"></param>
-        /// <param name="updateBuilder"></param>
-        /// <returns></returns>
-       // Task UpdateOneAsync(Expression<Func<T, bool>> filterexpression, UpdateBuilder<T> updateBuilder);
-
-        /// <summary>
-        /// Updates a many entities
-        /// </summary>
-        /// <param name="filterexpression"></param>
-        /// <param name="updateBuilder"></param>
-        /// <returns></returns>
-      //  Task UpdateManyAsync(Expression<Func<T, bool>> filterexpression, UpdateBuilder<T> updateBuilder);
-
-        /// <summary>
-        /// Add to set - add subdocument
-        /// </summary>
-        /// <typeparam name="U"></typeparam>
-        /// <param name="id"></param>
-        /// <param name="field"></param>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        Task AddToSet<U>(string id, Expression<Func<T, IEnumerable<U>>> field, U value);
-
-        /// <summary>
-        /// Update subdocument
-        /// </summary>
-        /// <typeparam name="U">Document</typeparam>
-        /// <typeparam name="Z">Subdocuments</typeparam>
-        /// <param name="id">Ident of entitie</param>
-        /// <param name="field"></param>
-        /// <param name="elemFieldMatch">Subdocument field to match</param>
-        /// <param name="elemMatch">Subdocument ident value</param>
-        /// <param name="value">Subdocument - to update (all values)</param>
-        /// <returns></returns>
-        Task UpdateToSet<U, Z>(string id, Expression<Func<T, IEnumerable<U>>> field, Expression<Func<U, Z>> elemFieldMatch, Z elemMatch, U value);
-
-        /// <summary>
-        /// Update subdocument
-        /// </summary>
-        /// <typeparam name="U">Document</typeparam>
-        /// <typeparam name="Z">Subdocuments</typeparam>
-        /// <param name="id">Ident of entitie</param>
-        /// <param name="field"></param>
-        /// <param name="elemFieldMatch">Subdocument field to match</param>
-        /// <param name="value">Subdocument - to update (all values)</param>
-        /// <returns></returns>
-        Task UpdateToSet<U>(string id, Expression<Func<T, IEnumerable<U>>> field, Expression<Func<U, bool>> elemFieldMatch, U value);
-
-        /// <summary>
-        /// Update subdocuments
-        /// </summary>
-        /// <typeparam name="T">Document</typeparam>
-        /// <typeparam name="Z">Subdocuments</typeparam>
-        /// <param name="id">Ident of entitie</param>
-        /// <param name="field"></param>
-        /// <param name="elemFieldMatch">Subdocument field to match</param>
-        /// <param name="value">Subdocument - to update (all values)</param>
-        /// <returns></returns>
-        Task UpdateToSet<U>(Expression<Func<T, IEnumerable<U>>> field, U elemFieldMatch, U value);
-
-
+      
         /// <summary>
         /// Delete subdocument
         /// </summary>
